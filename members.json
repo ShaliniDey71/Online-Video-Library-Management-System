@@ -1,0 +1,23 @@
+[
+    {
+        "name": "John Doe",
+        "email": "john.doe@example.com",
+        "status": "Active",
+        "joiningDate": "2022-01-15",
+        "subscriptionPlan": "Basic"
+    },
+    {
+        "name": "Jane Smith",
+        "email": "jane.smith@example.com",
+        "status": "Inactive",
+        "joiningDate": "2021-05-23",
+        "subscriptionPlan": "Premium"
+    },
+    {
+        "name": "Alice Brown",
+        "email": "alice.brown@example.com",
+        "status": "Active",
+        "joiningDate": "2023-03-10",
+        "subscriptionPlan": "Basic"
+    }
+]

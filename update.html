@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CD/DVD Management</title>
+    <link rel="stylesheet" href="update.css">
+</head>
+<body>
+    <header>
+        <h1>CD/DVD Management</h1>
+        <p>A collection of available CDs and DVDs</p>
+    </header>
+    <main>
+        <div class="container">
+            <form id="add-item-form">
+                <h2>Add a new CD/DVD</h2>
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required><br><br>
+
+                <label for="type">Type (CD/DVD):</label>
+                <select id="type" name="type" required>
+                    <option value="CD">CD</option>
+                    <option value="DVD">DVD</option>
+                </select><br><br>
+
+                <label for="released-year">Released Year:</label>
+                <input type="date" id="released-year" name="released-year" required><br><br>
+
+                <label for="genre">Genre:</label>
+                <input type="text" id="genre" name="genre" required><br><br>
+
+                <input type="submit" id="submit-btn" value="Add Item">
+            </form>
+            <div class="item-list-container">
+                <table id="item-list">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Type</th>
+                            <th>Released Year</th>
+                            <th>Genre</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dynamically populated rows will appear here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <div>
+        <a href="./librarianpanel.html" class="goback">Go Back</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

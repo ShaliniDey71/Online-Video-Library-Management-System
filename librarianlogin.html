@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager Login | Online Video Library Management System</title>
+    <link rel="stylesheet" href="librarianlogin.css">
+    <script>
+        // JavaScript to allow only numbers in the username input field
+        function validateUsername() {
+            const usernameInput = document.getElementById('username');
+            // Remove any non-numeric characters
+            usernameInput.value = usernameInput.value.replace(/[^0-9]/g, '');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="login-form">
+            <h1>Librarian Login</h1>
+            <form action="./librarianpanel.html">
+                <label for="username">User ID:</label>
+                <input type="text" id="username" name="username" required oninput="validateUsername()"><br><br>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required minlength="8" placeholder="Enter at least 8 characters"><br><br>
+                
+                <input type="submit" value="Login" style="background-color: rgb(144, 196, 238);">
+            </form>
+            
+            <p>Forgot Password? <a href="#">Click here</a></p>
+        </div>
+
+        <!-- Go Back Link -->
+        <div class="goback">
+            <p><a href="./homepage.html">Go Back</a></p>
+        </div>
+    </div>
+</body>
+</html>

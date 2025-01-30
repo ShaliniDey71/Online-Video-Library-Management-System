@@ -1,0 +1,360 @@
+body{
+    font-family: "Amazon Ember",Arial,sans-serif;
+    background-color: #cccccc;
+}
+
+/*NAVIGATION BAR*/
+.navbar{
+    width:100%;
+    height: 60px;
+    background-color:hsl(24, 86%, 26%);
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 0px;
+}
+
+.navbar-logo{
+
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 200%;
+    border:1px solid transparent;
+    font-weight: 900;
+    color: #daa785;
+}
+
+.navbar-logo:hover{
+    border:1px solid white;
+}
+
+.navbar-options{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.search-bar{
+    display:flex;
+    justify-content: center;
+    background-color: white;
+    border-radius: 10%;
+}
+
+input{
+    padding:10px 10px 9px 12px;
+    width:450px;
+    height:21px;
+    border: none;
+    background-color: white;
+    font-size:15px;
+}
+
+.search-icon{
+    width:35px;
+    color:black;
+    font-size: 1.2rem;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    background-color: #cc3a3a;
+    border-top-right-radius: 10%;
+    border-bottom-right-radius: 10%;
+}
+
+/*LANGUAGE*/
+.language-selector{
+    height:30px;
+    width:60px;
+    background-color:hsl(24, 86%, 26%);
+    border:none;
+    color:white;
+    font-weight: bolder;
+    margin-top: 10px;
+    margin-left: 20px;
+    border:1px solid transparent;
+}
+
+#language-selector:hover{
+    border: 1px solid white;
+}
+
+.wishlist-section{
+    color:white;
+    font-size: 15px;
+    font-weight: bolder;
+    margin-left: 20px;
+}
+
+/*RETURN AND ORDER*/
+.returns-orders{
+    padding:5px 5px 5px 5px;
+    border:1px solid transparent;
+    margin-left: 20px;
+}
+/* .returns-orders:hover{
+    border:1px solid white;
+} */
+
+.return{
+    color:white;
+    font-size: 12px;
+}
+
+.order{
+    color:white;
+    font-size:15px;
+    font-weight: bolder;
+}
+
+/*CART*/
+.shopping-cart{
+    color:white;
+    margin:10px 0px 9px 20px;
+    border:1px solid transparent;
+    font-weight: 700;
+}
+/* .shopping-cart:hover{
+    border:1px solid white;
+} */
+
+
+/*NAVIGATION BAR 2*/
+.navbar-secondary{
+    height:39px;
+    width:100%;
+    background-color: hsl(36, 48%, 28%);
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.genre-dropdown{
+    display: flex;
+    justify-content: space-around;
+}
+
+.genre{
+    color: #fcdfdf;
+    font-weight:600;
+}
+
+.genre-options{
+    margin-top: 12px;
+    margin-left: 7px;
+}
+
+.customer-service{
+    color: #fcdfdf;
+    font-weight: 600;
+}
+
+.feedback-section{
+    color: #fcdfdf;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.logout-section{
+    color: #fcdfdf;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+
+/* CATEGORY SECTION */
+.category-section {
+    margin: 0px 20px 20px 20px;
+    padding: 20px;
+    /* background-color: #f8f8f8; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+h2{
+    margin-left: 13px;
+}
+
+.shop-now{
+    padding-left: 13px;
+}
+
+.A1{
+    height:420px;
+    width:23%;
+    background-color: white;
+    margin:0px 0px 0px 19px;
+}
+
+#imgA1{
+    height:303px;
+    width:262px;
+    background-image: url("https://stat4.bollywoodhungama.in/wp-content/uploads/2021/07/Kalki-2898-AD-2.jpg");
+    background-size: cover;
+    background-position: center;
+    margin-left: 13px;
+    margin-bottom: 20px;
+}
+
+.A2{
+    height:420px;
+    width: 23%;
+    background-color: white;
+    margin-left: 19px;
+}
+
+#imgA2{
+    height:303px;
+    width:262px;
+    background-image: url("https://th.bing.com/th/id/OIP.4BQ14VKbOgT7NdoJ50ttUwHaK9?rs=1&pid=ImgDetMain");
+    background-size: cover;
+    background-position: center;
+    margin-left: 13px;
+    margin-bottom: 20px;
+}
+
+.A3{
+    height:420px;
+    width: 23%;
+    background-color: white;
+    margin-left: 19px;
+}
+
+#imgA3{
+    height:303px;
+    width:262px;
+    background-image: url("https://th.bing.com/th/id/OIP.ozBaFsZG9_gdqaYASNOMngAAAA?rs=1&pid=ImgDetMain");
+    background-size: cover;
+    background-position: center;
+    margin-left: 13px;
+    margin-bottom: 20px;
+}
+
+.A4{
+    height:420px;
+    width: 23%;
+    background-color: white;
+    margin-left: 19px;
+}
+
+#imgA4{
+    height:303px;
+    width:262px;
+    background-image: url("https://m.media-amazon.com/images/M/MV5BZDY5NWFjOTctNTQ0ZC00OGM5LWJkMmItN2RjNGZhMmEwMGMyXkEyXkFqcGdeQXVyMTUzNTgzNzM0._V1_.jpg");
+    background-size: cover;
+    background-position: center;
+    margin-left: 13px;
+    margin-bottom: 20px;
+}
+
+.A5{
+    height:420px;
+    width: 23%;
+    background-color: white;
+    margin:20px 0px 0px 19px;
+}
+
+#imgA5{
+    height:303px;
+    width:262px;
+    background-image: url("https://th.bing.com/th/id/OIP.ISSq0xnjM9cyPG-Pvj5YBwHaLH?rs=1&pid=ImgDetMain");
+    background-size: cover;
+    background-position: center;
+    margin-left: 13px;
+    margin-bottom: 20px;
+}
+
+.A6{
+    height:420px;
+    width: 23%;
+    background-color: white;
+    margin:20px 0px 0px 19px;
+}
+
+#imgA6{
+    height:303px;
+    width:262px;
+    background-image: url("https://i.pinimg.com/originals/8b/90/a0/8b90a0fa27306cbb9f9ce63d8e53dbc0.jpg");
+    background-size: cover;
+    background-position: center;
+    margin-left: 13px;
+    margin-bottom: 20px;
+}
+
+.A7{
+    height:420px;
+    width: 23%;
+    background-color: white;
+    margin:20px 0px 0px 19px;
+}
+
+#imgA7{
+    height:303px;
+    width:262px;
+    background-image: url("https://static.tvtropes.org/pmwiki/pub/images/tom_and_jerry_in_new_york_poster.jpg");
+    background-size: cover;
+    background-position: center;
+    margin-left: 13px;
+    margin-bottom: 20px;
+}
+
+.A8{
+    height:420px;
+    width: 23%;
+    background-color: white;
+    margin:20px 0px 0px 19px;
+}
+
+#imgA8{
+    height:303px;
+    width:262px;
+    background-image: url("https://neplych.com/wp-content/uploads/2024/03/Stree-2-Movie-Poster.png");
+    background-size: cover;
+    background-position: center;
+    margin-left: 13px;
+    margin-bottom: 20px;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+    background-color: cornsilk;
+}
+
+.card-img{
+    height: 300px;
+    width: 600px;
+    padding: auto;
+    background-size: cover;
+}
+
+.card-title{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: xx-large;
+    color: crimson;
+    margin-top: 0px;
+    margin-left: 20px;
+}
+
+.card-text{
+    margin-left: 20px;
+}
+
+button{
+    background-color: lightgreen;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:60px;
+    width:100%;
+    background-color:#7f5539;
+}
+

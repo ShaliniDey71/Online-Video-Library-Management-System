@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #e6daa8;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin-top: 50px;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .btn-primary {
+            background-color: #4CAF50;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #45a049;
+        }
+        .form-label {
+            font-weight: bold;
+        }
+        .goback {
+            position: absolute;
+            left: 47.5%;
+        }
+        .error-message {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+    <script>
+        function validateName() {
+            const nameInput = document.getElementById('name');
+            nameInput.value = nameInput.value.replace(/[^a-zA-Z\s]/g, '');
+        }
+
+        function validateCardNumber() {
+            const cardNumberInput = document.getElementById('cardNumber');
+            const errorMessage = document.getElementById('cardNumberError');
+            cardNumberInput.value = cardNumberInput.value.replace(/[^0-9]/g, '');
+
+            if (cardNumberInput.value.length !== 16) {
+                errorMessage.textContent = "Card number must be exactly 16 digits.";
+            } else {
+                errorMessage.textContent = "";
+            }
+        }
+
+        function validateExpiryDate() {
+            const expiryInput = document.getElementById('expiry');
+            const errorMessage = document.getElementById('expiryError');
+            expiryInput.value = expiryInput.value.replace(/[^0-9/]/g, '');
+
+            if (expiryInput.value.length > 2 && expiryInput.value[2] !== '/') {
+                expiryInput.value = expiryInput.value.slice(0, 2) + '/' + expiryInput.value.slice(2);
+            }
+
+            if (expiryInput.value.length > 5) {
+                expiryInput.value = expiryInput.value.slice(0, 5);
+            }
+
+            const parts = expiryInput.value.split('/');
+            if (parts.length === 2) {
+                const month = parseInt(parts[0], 10);
+                const year = parseInt(parts[1], 10);
+                if (month < 1 || month > 12 || isNaN(year)) {
+                    errorMessage.textContent = "Invalid expiry date (MM/YY).";
+                } else {
+                    errorMessage.textContent = "";
+                }
+            }
+        }
+
+        function validateCVV() {
+            const cvvInput = document.getElementById('cvv');
+            const errorMessage = document.getElementById('cvvError');
+            cvvInput.value = cvvInput.value.replace(/[^0-9]/g, '');
+
+            if (cvvInput.value.length !== 3) {
+                errorMessage.textContent = "CVV must be exactly 3 digits.";
+            } else {
+                errorMessage.textContent = "";
+            }
+        }
+
+        function validateZipCode() {
+            const zipInput = document.getElementById('zip');
+            zipInput.value = zipInput.value.replace(/[^0-9]/g, '');
+        }
+
+        function validateForm(event) {
+            const fields = document.querySelectorAll('input[required], select[required]');
+            let isValid = true;
+
+            fields.forEach(field => {
+                const errorMessage = field.nextElementSibling;
+                if (!field.value.trim()) {
+                    errorMessage.textContent = "Please insert a value in this field.";
+                    isValid = false;
+                } else {
+                    errorMessage.textContent = "";
+                }
+            });
+
+            if (!isValid) {
+                event.preventDefault();
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center">Payment Details</h2>
+        <form action="./compay.html" method="get" onsubmit="validateForm(event)">
+            <div class="mb-3">
+                <label for="name" class="form-label">Cardholder's Name</label>
+                <input type="text" id="name" class="form-control" placeholder="Enter cardholder's name" required oninput="validateName()">
+                <div class="error-message"></div>
+            </div>
+
+            <div class="mb-3">
+                <label for="cardNumber" class="form-label">Card Number</label>
+                <input type="text" id="cardNumber" class="form-control" placeholder="1234 5678 9123 4567" required oninput="validateCardNumber()">
+                <div id="cardNumberError" class="error-message"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="expiry" class="form-label">Expiry Date</label>
+                    <input type="text" id="expiry" class="form-control" placeholder="MM/YY" required oninput="validateExpiryDate()">
+                    <div id="expiryError" class="error-message"></div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label for="cvv" class="form-label">CVV</label>
+                    <input type="text" id="cvv" class="form-control" placeholder="123" required oninput="validateCVV()">
+                    <div id="cvvError" class="error-message"></div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Payment Method</label>
+                <select class="form-select" required>
+                    <option value="">Select a payment method</option>
+                    <option value="credit">Credit Card</option>
+                    <option value="debit">Debit Card</option>
+                    <option value="paypal">PayPal</option>
+                </select>
+                <div class="error-message"></div>
+            </div>
+
+            <h5 class="mt-4">Billing Address</h5>
+            <div class="mb-3">
+                <label for="address" class="form-label">Address</label>
+                <input type="text" id="address" class="form-control" placeholder="1234 Main St" required>
+                <div class="error-message"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="city" class="form-label">City</label>
+                    <select id="city" class="form-select" required>
+                        <option value="">Select your city</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Bangalore">Bangalore</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Ahmedabad">Ahmedabad</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Kolkata">Kolkata</option>
+                        <option value="Surat">Surat</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Jaipur">Jaipur</option>
+                        <option value="Lucknow">Lucknow</option>
+                        <option value="Kanpur">Kanpur</option>
+                        <option value="Nagpur">Nagpur</option>
+                        <option value="Indore">Indore</option>
+                        <option value="Thane">Thane</option>
+                        <option value="Bhopal">Bhopal</option>
+                        <option value="Visakhapatnam">Visakhapatnam</option>
+                        <option value="Patna">Patna</option>
+                        <option value="Vadodara">Vadodara</option>
+                        <option value="Ghaziabad">Ghaziabad</option>
+                    </select>
+                    <div class="error-message"></div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="zip" class="form-label">Zip Code</label>
+                    <input type="text" id="zip" class="form-control" required oninput="validateZipCode()">
+                    <div class="error-message"></div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 mt-3">Complete Payment</button>
+        </form>
+    </div>
+    <br>
+    <div class="goback">
+        <p><a href="./content.html">Go Back</a></p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

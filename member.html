@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Management</title>
+    <link rel="stylesheet" href="member.css">
+</head>
+<body>
+    <h1>Member Details Management</h1>
+
+    <!-- Member List Table -->
+    <div id="member-list">
+        <h2>Member List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Status</th>
+                    <th>Joining Date</th>
+                    <th>Subscription Plan</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="member-table-body">
+                <!-- Member details will be dynamically loaded here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Member Edit Form -->
+    <div id="edit-member-form" style="display: none;">
+        <h2>Edit Member</h2>
+        <form id="form">
+            <input type="hidden" id="member-id">
+            <label for="edit-name">Name:</label>
+            <input type="text" id="edit-name" required>
+            <label for="edit-email">Email:</label>
+            <input type="email" id="edit-email" required>
+            <label for="edit-status">Membership Status:</label>
+            <select id="edit-status" required>
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
+            </select>
+            <label for="edit-joiningDate">Joining Date:</label>
+            <input type="date" id="edit-joiningDate" required>
+            <button type="submit">Save Changes</button>
+            <button type="button" onclick="cancelEdit()">Cancel</button>
+        </form>
+    </div>
+
+    <div >
+        <a href="./admin.html" class="goback">Go Back</a>
+    </div>
+
+    <script src="member.js"></script>
+</body>
+</html>

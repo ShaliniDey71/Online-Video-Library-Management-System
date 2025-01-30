@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscription Plan Management</title>
+  <link rel="stylesheet" href="subscription.css">
+</head>
+<body>
+  <header>
+    <h1>Subscription Plan Management</h1>
+  </header>
+  <main>
+    <section class="add-plan">
+      <h2>Add New Plan</h2>
+      <form id="add-plan-form">
+        <label for="plan-name">Plan Name:</label>
+        <input type="text" id="plan-name" name="plan-name" required>
+        
+        <label for="plan-price">Price:</label>
+        <input type="number" id="plan-price" name="plan-price" required>
+        
+        <label for="plan-duration">Duration (months):</label>
+        <input type="number" id="plan-duration" name="plan-duration" min="1" required>
+        
+        <button type="submit">Add Plan</button>
+      </form>
+    </section>
+
+    <section class="manage-plans">
+      <h2>Manage Existing Plans</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Plan Name</th>
+            <th>Price</th>
+            <th>Duration</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Existing plans will be dynamically inserted here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <div>
+    <a href="./admin.html" class="goback">Go Back</a>
+  </div>
+
+  <footer>
+    <p>© 2024 Subscription Management</p>
+  </footer>
+
+  <script src="subscription.js"></script>
+</body>
+</html>

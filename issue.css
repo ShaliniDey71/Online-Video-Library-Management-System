@@ -1,0 +1,185 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #333;
+  background-image: url('./issue_background.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0 40px;
+  background-attachment: fixed;
+}
+
+/* Header Styles */
+header {
+  background-color: #212121;
+  padding: 2em;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 1em;
+  color: #fff;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin-right: 30px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #ccc;
+}
+
+/* Search Bar Styles */
+.search-bar {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 3em;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-bar input[type="text"] {
+  width: 75%;
+  padding: 1.2em;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+}
+
+.search-bar button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 1em 2em;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.search-bar button:hover {
+  background-color: #45a049;
+}
+
+/* Book List Styles */
+.book-list {
+  margin-top: 3em;
+}
+
+.book-list h2 {
+  text-align: center;
+  color: #333;
+}
+
+.book-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book-list li {
+  margin-bottom: 2em;
+  padding: 2em;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.book-list li:hover {
+  background-color: #f1f1f1;
+  transform: translateY(-5px);
+}
+
+/* Issue/Renew Form Styles */
+.issue-renew-form {
+  margin-top: 3em;
+}
+
+.issue-renew-form h2 {
+  text-align: center;
+}
+
+.issue-renew-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.issue-renew-form input[type="text"],
+.issue-renew-form input[type="date"] {
+  width: 70%;
+  padding: 0.8em;
+  margin-bottom: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.issue-renew-form button {
+  width: 48%;
+  padding: 1em 2em;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin: 10px;
+}
+
+.issue-renew-form button#issue-btn {
+  background-color: lightpink;
+}
+
+.issue-renew-form button#issue-btn:hover {
+  background-color: lightcoral;
+}
+
+.issue-renew-form button#renew-btn {
+  background-color: mediumpurple;
+}
+
+.issue-renew-form button#renew-btn:hover {
+  background-color: indigo;
+}
+
+/* Footer Styles */

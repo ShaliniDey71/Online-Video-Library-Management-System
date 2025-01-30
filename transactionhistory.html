@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction History - Online Video Library</title>
+    <link rel="stylesheet" href="transactionhistory.css">
+</head>
+<body>
+    <header>
+        <h1>Transaction History</h1>
+        <nav>
+            <ul>
+                <li><a href="./home.html">Home</a></li>
+                <li><a href="./librarianpanel.html">Librarian Panel</a></li>
+                <li><a href="./logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="transaction-history">
+            <h2>Recent Transactions</h2>
+            <table id="transaction-table">
+                <thead>
+                    <tr>
+                        <th>Transaction ID</th>
+                        <th>Member Name</th>
+                        <th>Member ID</th>
+                        <th>Transaction Type</th>
+                        <th>Transaction Date</th>
+                        <th>CD/DVD ID</th>
+                        <th>CD/DVD Name</th>
+                        <th>Buy/Rent</th>
+                        <th>Amount Paid</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example rows, this will be populated dynamically -->
+                    <tr>
+                        <td>1</td>
+                        <td>Aarav Kumar</td>
+                        <td>101</td>
+                        <td>Issue</td>
+                        <td>2024-11-28</td>
+                        <td>CD001</td>
+                        <td>Inception</td>
+                        <td>Rent</td>
+                        <td>₹150</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Priya Sharma</td>
+                        <td>102</td>
+                        <td>Return</td>
+                        <td>2024-11-27</td>
+                        <td>CD002</td>
+                        <td>Avengers: Endgame</td>
+                        <td>Rent</td>
+                        <td>₹100</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Rajesh Gupta</td>
+                        <td>103</td>
+                        <td>Issue</td>
+                        <td>2024-11-26</td>
+                        <td>CD003</td>
+                        <td>The Dark Knight</td>
+                        <td>Buy</td>
+                        <td>₹150</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Simran Reddy</td>
+                        <td>104</td>
+                        <td>Return</td>
+                        <td>2024-11-25</td>
+                        <td>CD004</td>
+                        <td>Interstellar</td>
+                        <td>Rent</td>
+                        <td>₹100</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Manish Patel</td>
+                        <td>105</td>
+                        <td>Issue</td>
+                        <td>2024-11-24</td>
+                        <td>CD005</td>
+                        <td>Avatar</td>
+                        <td>Buy</td>
+                        <td>₹150</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Neha Gupta</td>
+                        <td>106</td>
+                        <td>Return</td>
+                        <td>2024-11-23</td>
+                        <td>CD006</td>
+                        <td>Spider-Man: No Way Home</td>
+                        <td>Rent</td>
+                        <td>₹100</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Rahul Verma</td>
+                        <td>107</td>
+                        <td>Issue</td>
+                        <td>2024-11-22</td>
+                        <td>CD007</td>
+                        <td>Sholay</td>
+                        <td>Buy</td>
+                        <td>₹150</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Sneha Joshi</td>
+                        <td>108</td>
+                        <td>Return</td>
+                        <td>2024-11-21</td>
+                        <td>CD008</td>
+                        <td>Baahubali: The Beginning</td>
+                        <td>Rent</td>
+                        <td>₹100</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Vikas Yadav</td>
+                        <td>109</td>
+                        <td>Issue</td>
+                        <td>2024-11-20</td>
+                        <td>CD009</td>
+                        <td>3 Idiots</td>
+                        <td>Buy</td>
+                        <td>₹150</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Alisha Mehta</td>
+                        <td>110</td>
+                        <td>Return</td>
+                        <td>2024-11-19</td>
+                        <td>CD010</td>
+                        <td>Lagaan</td>
+                        <td>Rent</td>
+                        <td>₹100</td>
+                    </tr>
+                </tbody>
+                
+            </table>
+        </section>
+    </main>
+
+    <div >
+        <a href="./librarianpanel.html" class="goback">Go Back</a>
+    </div>
+
+    <footer>
+        <div class="footer-text">
+            <p>&copy; 2024 Online Video Library Management System</p>
+        </div>
+    </footer>
+
+
+
+    <script>
+        // JavaScript to dynamically populate the transaction table if needed
+        // You can fetch transaction data from an API or database in a real application
+        // For now, we use static data as an example.
+    </script>
+</body>
+</html>

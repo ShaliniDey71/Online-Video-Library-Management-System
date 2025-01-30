@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report History</title>
+    <link rel="stylesheet" href="reporthistory.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Report History</h1>
+    <table id="report-table">
+        <thead>
+            <tr>
+                <th>Month</th>
+                <th>Total Members</th>
+                <th>Active Members</th>
+                <th>Inactive Members</th>
+                <th>New Members</th>
+                <th>CDs Rented</th>
+                <th>CDs Bought</th>
+                <th>Total Sales</th>
+                <th>Profit</th>
+                <th>Profit Percentage (%)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Table rows will be dynamically generated -->
+        </tbody>
+    </table>
+
+    <script>
+        // JSON Data
+        const reportData = [
+    {
+        "month": "2023-01",
+        "totalMembers": 100,
+        "activeMembers": 80,
+        "inactiveMembers": 20,
+        "newMembers": 10,
+        "cdsRented": 30,
+        "cdsBought": 20,
+        "totalSales": 1000,
+        "profit": 300,
+        "profitPercentage": 30
+    },
+    {
+        "month": "2023-02",
+        "totalMembers": 110,
+        "activeMembers": 85,
+        "inactiveMembers": 25,
+        "newMembers": 15,
+        "cdsRented": 35,
+        "cdsBought": 25,
+        "totalSales": 1200,
+        "profit": 350,
+        "profitPercentage": 29.2
+    },
+    {
+        "month": "2023-03",
+        "totalMembers": 120,
+        "activeMembers": 90,
+        "inactiveMembers": 30,
+        "newMembers": 20,
+        "cdsRented": 40,
+        "cdsBought": 30,
+        "totalSales": 1500,
+        "profit": 400,
+        "profitPercentage": 26.7
+    },
+    {
+        "month": "2023-04",
+        "totalMembers": 130,
+        "activeMembers": 95,
+        "inactiveMembers": 35,
+        "newMembers": 25,
+        "cdsRented": 45,
+        "cdsBought": 35,
+        "totalSales": 1600,
+        "profit": 450,
+        "profitPercentage": 28.1
+    },
+    {
+        "month": "2023-05",
+        "totalMembers": 140,
+        "activeMembers": 105,
+        "inactiveMembers": 35,
+        "newMembers": 30,
+        "cdsRented": 50,
+        "cdsBought": 40,
+        "totalSales": 1800,
+        "profit": 500,
+        "profitPercentage": 27.8
+    },
+    {
+        "month": "2023-06",
+        "totalMembers": 150,
+        "activeMembers": 110,
+        "inactiveMembers": 40,
+        "newMembers": 35,
+        "cdsRented": 55,
+        "cdsBought": 45,
+        "totalSales": 1900,
+        "profit": 550,
+        "profitPercentage": 28.9
+    },
+    {
+        "month": "2023-07",
+        "totalMembers": 160,
+        "activeMembers": 120,
+        "inactiveMembers": 40,
+        "newMembers": 40,
+        "cdsRented": 60,
+        "cdsBought": 50,
+        "totalSales": 2000,
+        "profit": 600,
+        "profitPercentage": 30
+    },
+    {
+        "month": "2023-08",
+        "totalMembers": 170,
+        "activeMembers": 130,
+        "inactiveMembers": 40,
+        "newMembers": 45,
+        "cdsRented": 65,
+        "cdsBought": 55,
+        "totalSales": 2100,
+        "profit": 650,
+        "profitPercentage": 31.0
+    },
+    {
+        "month": "2023-09",
+        "totalMembers": 180,
+        "activeMembers": 140,
+        "inactiveMembers": 40,
+        "newMembers": 50,
+        "cdsRented": 70,
+        "cdsBought": 60,
+        "totalSales": 2200,
+        "profit": 700,
+        "profitPercentage": 31.8
+    },
+    {
+        "month": "2023-10",
+        "totalMembers": 190,
+        "activeMembers": 150,
+        "inactiveMembers": 40,
+        "newMembers": 55,
+        "cdsRented": 75,
+        "cdsBought": 65,
+        "totalSales": 2300,
+        "profit": 750,
+        "profitPercentage": 32.6
+    },
+    {
+        "month": "2023-11",
+        "totalMembers": 200,
+        "activeMembers": 160,
+        "inactiveMembers": 40,
+        "newMembers": 60,
+        "cdsRented": 80,
+        "cdsBought": 70,
+        "totalSales": 2400,
+        "profit": 800,
+        "profitPercentage": 33.3
+    },
+    {
+        "month": "2023-12",
+        "totalMembers": 210,
+        "activeMembers": 170,
+        "inactiveMembers": 40,
+        "newMembers": 65,
+        "cdsRented": 85,
+        "cdsBought": 75,
+        "totalSales": 2500,
+        "profit": 850,
+        "profitPercentage": 34.0
+    }
+]
+;
+
+        // Function to populate table
+        const populateTable = (data) => {
+            const tableBody = document.querySelector("#report-table tbody");
+            tableBody.innerHTML = ""; // Clear previous rows
+
+            data.forEach(report => {
+                const row = document.createElement("tr");
+
+                row.innerHTML = `
+                    <td>${report.month}</td>
+                    <td>${report.totalMembers}</td>
+                    <td>${report.activeMembers}</td>
+                    <td>${report.inactiveMembers}</td>
+                    <td>${report.newMembers}</td>
+                    <td>${report.cdsRented}</td>
+                    <td>${report.cdsBought}</td>
+                    <td>${report.totalSales}</td>
+                    <td>${report.profit}</td>
+                    <td>${report.profitPercentage.toFixed(1)}</td>
+                `;
+
+                tableBody.appendChild(row);
+            });
+        };
+
+        // Populate table on page load
+        document.addEventListener("DOMContentLoaded", () => {
+            populateTable(reportData);
+        });
+    </script>
+
+<div >
+    <a href="./admin.html" class="goback">Go Back</a>
+</div>
+
+</body>
+</html>

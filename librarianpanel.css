@@ -1,0 +1,130 @@
+/* Base styling for the full panel */
+.fullpanel {
+    background-color: #d3c8f0;
+    background-image: linear-gradient(to right, #5b3ac4, #f0c8e0);
+    height: 700px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Styling for the header text */
+.paneltext {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2a2e3b;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 0px;
+}
+
+/* Styling the panel area */
+.panelarea {
+    height: 350px;
+    width: 80%;
+    margin: 0px 0px 0px 120px;
+    background-color: #1a2c44;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Grid item styling for the sections */
+#grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 180px;
+    width: 220px;
+    border: 3px solid #7a6fa5;
+    background-color: #2a3a5a;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Change text size and colors for the logo */
+.cdrooms {
+    font-size: 2.5rem;
+    font-family: 'Georgia', serif;
+    color: #6b3d99;
+}
+
+.librarian {
+    position: absolute;
+    top: 30px;
+    left: 340px;
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: #b4b4b4;
+}
+
+/* Navigation bar styling */
+.navcontent {
+    width: 100%;
+    height: 70px;
+    background-color: #1e2530;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #e1e8f0;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+.navcontent a {
+    color: #e1e8f0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navcontent a:hover {
+    color: #f4d03f;
+}
+
+/* Footer styling */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    background-color: #2a2c44;
+    color: #c4c9d1;
+    /* margin-top: 40px; */
+}
+
+.footertext p {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Hover effect for the grid items */
+#grid:hover {
+    height: 200px;
+    width: 240px;
+    background-color: #3c4f6a;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Text colors for links in grid items */
+.transaction, .modify, .fine-cal, .book-issue {
+    color: #f4f4f9;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Styling for the links inside grid items */
+.inventorytext:hover, .membertext:hover, .planstext:hover, .reporttext:hover {
+    color: #ff7f50;
+    text-decoration: underline;
+}
+

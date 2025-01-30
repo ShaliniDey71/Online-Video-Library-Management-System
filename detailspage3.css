@@ -1,0 +1,33 @@
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+body {
+    background-image: url('https://cdn.pixabay.com/photo/2017/08/04/10/32/background-2579710_640.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.goback {
+    position: absolute;
+    left:90%;
+    top: 20px;
+    z-index: 1;
+    font-size: large;
+    color: #333;
+}

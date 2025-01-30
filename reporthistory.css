@@ -1,0 +1,111 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f1f1f1;
+    color: #333;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* Page title */
+h1 {
+    font-size: 2.5rem;
+    color: #4CAF50;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Table container styling */
+table-container {
+    width: 90%;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Table header styling */
+th {
+    background-color: #4CAF50; /* Ensure this is set */
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+/* Table data styling */
+td {
+    background-color: #fff;
+    padding: 12px;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Hover effects for table rows */
+tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+tr:hover td {
+    background-color: #e0f7fa;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Table row borders */
+td, th {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Box-shadow effect on table rows when hovered */
+tr:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    body {
+        margin: 10px;
+    }
+
+    table {
+        font-size: 0.85rem;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+.goback {
+    position: absolute;
+    left:90%;
+    top: 25px;
+    z-index: 1;
+    font-size: large;
+    color: #333;
+}

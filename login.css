@@ -1,0 +1,114 @@
+.fullpage {
+    background-image: url("https://th.bing.com/th/id/OIP.dDVA8gq3lKIah0dJybCnXAHaE8?rs=1&pid=ImgDetMain");
+    height: 600px;
+    background-size: cover;
+}
+
+.box {
+    display: flex;
+    height: 500px;
+    width: 80%;
+    position: relative;
+    top: 15px;
+    left: 10%;
+    background-image: url("https://th.bing.com/th/id/OIP.dDVA8gq3lKIah0dJybCnXAHaE8?rs=1&pid=ImgDetMain");
+    background-size: cover;
+    box-shadow: 10px 5px 8px rgb(46, 16, 16);
+}
+
+.login{
+    color: #7f5539;
+}
+
+.imagelib {
+    height: 500px;
+    width: 50%;
+    background-image: url("https://image.benq.com/is/image/benqco/0038kv?$ResponsivePreset$");
+    background-size: cover;
+    background-position: center;
+}
+
+.loginspace {
+    height: 300px;
+    width: 250px;
+    margin: auto;  /* Center horizontally */
+    border-radius: 10px;
+    background-color: #f1d4b7;
+    border: 2px solid rgb(102, 55, 24);
+    padding: 15px;
+}
+
+.loginnote {
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+    color: rgb(102, 55, 24);
+}
+
+.idbar, .passwordbar, .submit {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.forgot {
+    text-align: center;
+    font-size: small;
+    color: rgb(102, 55, 24);
+    margin-top: 10px;
+}
+
+.register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.account {
+    padding-top: 0px;
+}
+
+.register1 a {
+    position: relative;
+    top:-25px;
+    color: rgb(102, 55, 24);
+    text-decoration: underline;
+}
+
+.submit input {
+    padding: 5px 20px;
+    background-color: rgb(102, 55, 24);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit input:hover {
+    background-color: rgb(85, 45, 20);
+}
+
+.navcontent {
+    width: 100%;
+    height: 60px;
+    background-color: #66513b;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #e69b70;
+    font-weight: bold;
+}
+
+.cdrooms {
+    font-size: xx-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    background-color: #7f5539;
+}

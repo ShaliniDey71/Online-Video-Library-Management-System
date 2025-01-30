@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CD Rooms | Login</title>
+    <link rel="stylesheet" href="login.css">
+    <script>
+        // JavaScript to allow only numbers in the user ID field
+        function validateUsername() {
+            const usernameInput = document.getElementById('username');
+            // Remove any non-numeric characters
+            usernameInput.value = usernameInput.value.replace(/[^0-9]/g, '');
+        }
+
+        // JavaScript to validate the password length
+        function validatePassword() {
+            const passwordInput = document.getElementById('password');
+            if (passwordInput.value.length < 8) {
+                passwordInput.setCustomValidity("Password must be at least 8 characters long.");
+            } else {
+                passwordInput.setCustomValidity(""); // Clear the validation if the password length is sufficient
+            }
+        }
+
+        // Prevent form submission if the password is too short
+        function validateForm(event) {
+            const passwordInput = document.getElementById('password');
+            if (passwordInput.value.length < 8) {
+                event.preventDefault();
+                alert("Password must be at least 8 characters long.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="fullpage">
+            <div class="navbar">
+                <div class="navcontent">
+                    <div class="navlogo">
+                        <div class="logo">
+                            <p class="cdrooms">CD Rooms</p>
+                        </div>
+                    </div>
+                    <div class="aboutus">
+                        <u>About Us</u>
+                    </div>
+                    <div class="services"><u>Services</u></div>
+                    <div class="contactus"><u>Contact Us</u></div>
+                    <div class="login"><a href="./homepage.html" style="color: #e69b70;"><u>Back to home</u></a></div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imagelib"></div>
+                <div class="loginspace">
+                    <div class="login-header">
+                        <p class="loginnote">Login</p>
+                    </div>
+                    <div class="idbar">
+                        <div class="id">
+                            <input type="text" id="username" placeholder="Enter User ID" required oninput="validateUsername()">
+                        </div>
+                    </div>
+                    <div class="passwordbar">
+                        <div class="password">
+                            <input type="password" id="password" placeholder="Enter Password" required minlength="8" oninput="validatePassword()">
+                        </div>
+                    </div>
+                    <form class="submit" action="./content.html" onsubmit="validateForm(event)">
+                        <input type="submit" value="Login" class="submit">
+                    </form>
+                 
+                    <p class="forgot">Forgot Password? <a href="#">Click here</a></p>
+                    <div class="register">
+                        <p class="account">Don't have an account?</p>
+                        <p class="register1"><a href="./register.html">Register</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footertext">
+                <p class="foottext">@ 2024 Online Video Library Management System</p>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

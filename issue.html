@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Video Library Management System</title>
+    <link rel="stylesheet" href="issue.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>CD Rooms</h1>
+            <nav>
+                <ul>
+                    <li><a href="./home.html">Home</a></li>
+                    <li><a href="./librarianpanel.html">Librarian Panel</a></li>
+                    <li><a href="./logout.html">Logout</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <section class="issue-renew-form">
+            <h2>Issue/Renewal</h2>
+            <form id="issue-renew-form">
+                <label for="book-id">CD/DVD ID:</label>
+                <input type="text" id="book-id" required>
+                <label for="member-id">Member ID:</label>
+                <input type="number" id="member-id" required>
+                <label for="issue-date">Issue Date:</label>
+                <input type="date" id="issue-date" required>
+                <label for="return-date">Return Date:</label>
+                <input type="date" id="return-date" required>
+                <button type="button" id="issue-btn">Issue</button>
+                <button type="button" id="renew-btn">Renew</button>
+            </form>
+        </section>  
+    </main>
+
+
+    <script>
+        // Handle issue button click
+        document.getElementById('issue-btn').addEventListener('click', function() {
+            const bookId = document.getElementById('book-id').value;
+            const memberId = document.getElementById('member-id').value;
+            const issueDate = document.getElementById('issue-date').value;
+            const returnDate = document.getElementById('return-date').value;
+
+            if (!bookId || !memberId || !issueDate || !returnDate) {
+                alert('Please fill all fields');
+                return;
+            }
+
+            alert(`Book ID ${bookId} has been issued to Member ID ${memberId}`);
+            // Logic to process the issue can be added here
+        });
+
+        // Handle renew button click
+        document.getElementById('renew-btn').addEventListener('click', function() {
+            const bookId = document.getElementById('book-id').value;
+            const memberId = document.getElementById('member-id').value;
+            const issueDate = document.getElementById('issue-date').value;
+            const returnDate = document.getElementById('return-date').value;
+
+            if (!bookId || !memberId || !issueDate || !returnDate) {
+                alert('Please fill all fields');
+                return;
+            }
+
+            alert(`Book ID ${bookId} has been renewed for Member ID ${memberId}`);
+            // Logic to process the renewal can be added here
+        });
+    </script>
+</body>
+</html>

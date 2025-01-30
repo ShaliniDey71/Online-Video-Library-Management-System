@@ -1,0 +1,93 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to left, #5A9, #8a2be2); /* Blue to purple gradient */
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: white; /* White text for the header */
+    margin-top: 20px;
+    font-size: 2.5rem;
+}
+
+/* Movie List Section */
+#movie-list {
+    margin: 20px auto;
+    width: 80%;
+    background: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners for a soft look */
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #5A9; /* Blue-green header background */
+    color: white;
+    text-transform: uppercase;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+tr:nth-child(odd) {
+    background-color: #f9f9f9; /* Light gray for odd rows */
+}
+
+tr:nth-child(even) {
+    background-color: #f3f3f3; /* Slightly darker gray for even rows */
+}
+
+/* Button Styles */
+button {
+    padding: 8px 15px;
+    margin: 0 5px;
+    border: none;
+    color: white;
+    background-color: #6a5acd; /* Purple-blue background */
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #483d8b; /* Darker purple-blue on hover */
+}
+
+button:disabled {
+    background-color: #d3d3d3; /* Light gray for disabled button */
+    cursor: not-allowed;
+}
+
+/* Go Back Link */
+.goback {
+    position: absolute;
+    left: 90%;
+    top: 25px;
+    z-index: 1;
+    font-size: 1.2rem;
+    color: #3b8cba; /* Blue color for back link */
+    text-decoration: none;
+}
+
+.goback:hover {
+    color: #8a2be2; /* Purple hover effect */
+    text-decoration: underline;
+}

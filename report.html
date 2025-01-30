@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Report</title>
+    <link rel="stylesheet" href="report.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Monthly Report Generation</h1>
+
+    <div id="report-filter">
+        <label for="month">Select Month:</label>
+        <input type="month" id="month" required>
+        <button onclick="generateReport()">Generate Report</button>
+    </div>
+
+    <div id="report-output" style="display: none;">
+        <h2>Report Summary</h2>
+        <p>Total Members: <span id="total-members"></span></p>
+        <p>Active Members: <span id="active-members"></span></p>
+        <p>Inactive Members: <span id="inactive-members"></span></p>
+        <p>New Members This Month: <span id="new-members"></span></p>
+        <p>CDs Rented: <span id="cds-rented"></span></p>
+        <p>CDs Bought: <span id="cds-bought"></span></p>
+        <p>Total Sales: <span id="total-sales"></span></p>
+        <p>Total Profit: <span id="profit"></span></p>
+        <p>Profit Percentage: <span id="profit-percentage"></span>%</p>
+    </div>
+
+    <div id="charts-container">
+        <div id="chart-container">
+            <h3>New Members Over Time</h3>
+            <canvas id="monthlyNewMembersChart"></canvas>
+        </div>
+        <div id="chart-container">
+            <h3>CD Sales and Rented CDs</h3>
+            <canvas id="cdSalesChart"></canvas>
+        </div>
+    </div>
+
+    <div >
+        <a href="./admin.html" class="goback">Go Back</a>
+    </div>
+
+    <script src="report.js"></script>
+</body>
+</html>
